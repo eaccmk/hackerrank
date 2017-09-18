@@ -16,6 +16,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+//this is the actual logic
 class Add {
 	public void add(int... intArgs) {
 		int sum = 0;
@@ -48,6 +49,8 @@ public class Solution {
 			Method[] methods=Add.class.getDeclaredMethods();
 			Set<String> set=new HashSet<>();
 			boolean overload=false;
+	       
+	       //logic to check if the class contains methods which are duplicate by name or Overloaded
 			for(int i=0;i<methods.length;i++)
 			{
 				if(set.contains(methods[i].getName()))
